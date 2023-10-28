@@ -5,7 +5,7 @@ sudo swapoff -a
 sudo zramctl --reset /dev/zram0
 
 # Add kubernetes repository
-if test -f /etc/yum.repos.d/kubernetes.repo ; then
+if ! test -f /etc/yum.repos.d/kubernetes.repo ; then
     sudo sh -c 'cat > /etc/yum.repos.d/kubernetes.repo <<EOL
 [kubernetes]
 baseurl = https://pkgs.k8s.io/core:/stable:/v1.26/rpm/

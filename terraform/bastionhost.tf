@@ -16,13 +16,12 @@ resource "aws_instance" "bastion_host" {
 
 resource "aws_key_pair" "bastion_host" {
   key_name   = "bastion_host_key"
-  public_key = file("bastion_host_key.pub")
+  public_key = file("${var.bastion_host_key_name}.pub")
 }
 
 resource "aws_security_group" "bastion_host" {
   vpc_id = aws_vpc.k8s_cluster.id
 
-  # This needs work
   ingress {
     description = "ssh"
     from_port   = 22

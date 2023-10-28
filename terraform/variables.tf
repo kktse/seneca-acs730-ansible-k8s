@@ -15,3 +15,15 @@ variable "private_subnet_cidr_block" {
   type        = string
   default     = "10.0.10.0/24"
 }
+
+variable "bastion_host_key_name" {
+  description = "The name of the bastion host SSH key"
+  type        = string
+  default     = "bastion_host_key"
+}
+
+variable "k8s_key_name" {
+  description = "The name of the kubernetes node SSH key"
+  type        = string
+  default     = "k8s_key"
+}

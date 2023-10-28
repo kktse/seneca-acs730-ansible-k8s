@@ -15,7 +15,7 @@ name = kubernetes yum repo
 repo_gpgcheck = 1
 EOL'
 fi
-#
+
 # Install required packages
 sudo yum -y install docker kubelet kubeadm kubectl --disableexcludes=kubernetes
 
