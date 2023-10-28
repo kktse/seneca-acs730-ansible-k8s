@@ -1,5 +1,5 @@
 resource "aws_instance" "k8s_workers" {
-  count                  = 1
+  count                  = var.worker_count
   instance_type          = "t3a.small"
   ami                    = data.aws_ami.al2.id
   subnet_id              = aws_subnet.private.id

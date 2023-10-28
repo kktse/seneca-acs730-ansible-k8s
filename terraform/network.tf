@@ -31,8 +31,8 @@ resource "aws_route_table" "private" {
   vpc_id = aws_vpc.k8s_cluster.id
 
   route {
-    cidr_block = "0.0.0.0/0"
-    gateway_id = aws_nat_gateway.natgw.id
+    cidr_block     = "0.0.0.0/0"
+    nat_gateway_id = aws_nat_gateway.natgw.id
   }
 }
 

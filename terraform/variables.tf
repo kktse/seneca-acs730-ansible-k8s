@@ -27,3 +27,9 @@ variable "k8s_key_name" {
   type        = string
   default     = "k8s_key"
 }
+
+variable "worker_count" {
+  description = "Count of worker nodes to deploy"
+  type        = number
+  default     = 1
+}

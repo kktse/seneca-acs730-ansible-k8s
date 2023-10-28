@@ -89,4 +89,8 @@ $ curl 10.0.10.98:32163
 <head>
 <title>Welcome to nginx!</title>
 ...
+
+# Delete the deployment
+$ kubectl delete deployment nginx
+deployment.apps "nginx" deleted
 ```
