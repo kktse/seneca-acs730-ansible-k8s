@@ -33,7 +33,7 @@ Kubernetes.
 
 ## Reverting the Kubernetes installation
 
-To remove the Kubernetes from the cluster, run the following commands on all of the nodes:
+To remove Kubernetes from the node, run the following command:
 
 ```bash
 sudo kubeadm reset
