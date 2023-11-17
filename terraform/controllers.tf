@@ -1,6 +1,6 @@
 resource "aws_instance" "k8s_cp" {
   count                  = 1
-  instance_type          = "t3a.small"
+  instance_type          = var.k8s_instance_type
   ami                    = data.aws_ami.al2.id
   subnet_id              = aws_subnet.private.id
   vpc_security_group_ids = [aws_security_group.k8s_cp.id]

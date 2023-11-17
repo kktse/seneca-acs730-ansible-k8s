@@ -16,6 +16,24 @@ variable "private_subnet_cidr_block" {
   default     = "10.0.10.0/24"
 }
 
+variable "public_subnet_az" {
+  description = "The availability zone for the public subnet."
+  type        = string
+  default     = "us-east-1a"
+}
+
+variable "private_subnet_az" {
+  description = "The availability zone for the private subnet."
+  type        = string
+  default     = "us-east-1b"
+}
+
+variable "k8s_instance_type" {
+  description = "The instance type to use for the cluster. Note that the default instance type t3a.small is not available in all regions or availability zones."
+  type        = string
+  default     = "t3a.small"
+}
+
 variable "bastion_host_key_name" {
   description = "The name of the bastion host SSH key"
   type        = string
