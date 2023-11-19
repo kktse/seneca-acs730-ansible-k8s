@@ -48,7 +48,7 @@ export BASTION_IP=<Public IP address of the bastion host>
 export NODE_IP=<Private IP address of the node>
 export BASTION_KEY=<Path to the bastion host SSH private key>
 export NODE_KEY=<Path to the node SSH private key>
-ssh -i $NODE_KEY -o Proxycommand="ssh -i $BASTION_KEY -W %h:%p ec2-user@$NODE_IP" ec2-user@$NODE_IP
+ssh -i $NODE_KEY -o ProxyCommand="ssh -i $BASTION_KEY -W %h:%p ec2-user@$BASTION_IP" ec2-user@$NODE_IP
 ```
 
 ## Running a simple nginx webserver on the cluster
